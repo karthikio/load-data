@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from rest_framework.viewsets import ModelViewSet
-from .models import RandomData
-from .serializers import DataSerializer
+from rest_framework import viewsets
+from .models import Post
+from .serializers import PostSerializer
 
 
-class DataLoader(ModelViewSet):
-  queryset = RandomData()
-  serializer_class = DataSerializer
+class DataLoader(viewsets.ModelViewSet):
+  queryset = Post.objects.all()
+  serializer_class = PostSerializer

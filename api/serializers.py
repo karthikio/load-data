@@ -1,8 +1,7 @@
-from rest_framework import fields, serializers
 from rest_framework.serializers import ModelSerializer
-from .models import RandomData
+from .models import Post
 
-class DataSerializer(ModelSerializer):
+class PostSerializer(ModelSerializer):
   class Meta:
-    model = RandomData
+    model = Post
     fields = '__all__'
