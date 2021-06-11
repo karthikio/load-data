@@ -13,6 +13,10 @@ body{
   background-size: cover;
 }
 
+.hidden{
+  display: none;
+}
+
 .posts-container{
   width: 100%;
   padding: 20px;
@@ -41,7 +45,7 @@ body{
 }
 
 .info-container{
-  line-height: 1rem;
+  line-height: 1.2rem;
   margin: 5px 28px;
   padding: 2px;
 }
@@ -70,4 +74,30 @@ body{
 .show-more:hover{
   border: #fff solid 1px;
   color: #fff;
+}
+
+#loader-container{
+  height: 4px;
+  width: 100%;
+  background-color: #4f4f4f;
+  top: 0;
+  position: fixed;
+  z-index: 11;
+}
+
+#loader{
+  height: 100%;
+  left: 0;
+  background: linear-gradient(to right,#20f8ff, #ffffff7c);
+  animation: loading 2s 1;
+}
+
+
+@keyframes loading{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 100%;
+  }
 }

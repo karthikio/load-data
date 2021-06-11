@@ -11,12 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="loader-container">
+    <div id="loader"></div>
+  </div>
+
   <div class="posts-container">
     <div class="posts">
       
     </div>
-    <button id="load-data-btn" class="show-more">Show More</button>
+    <button id="load-data-btn" class="show-more hidden">Show More</button>
   </div>
+
   <script src="{% static 'script/app.js' %}"></script>
 </body>
 </html>
