@@ -14,8 +14,11 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loaderContainer.style.display = 'none';
     loader.style.display = 'none';
-    btn.style.display = 'block';
-  }, 3000)
+    setTimeout(()=>{
+      getPosts();
+      btn.style.display = 'block';
+    }, 800)
+  }, 2000)
 
   // pagination count
   let page = 1;
@@ -50,27 +53,26 @@ window.addEventListener('load', () => {
     })
     
   }
-  getPosts();
+  
 
 
   // show more posts onclick
   btn.addEventListener('click', e => {
+    btn.style.display = 'none';
+
     e.preventDefault();
     if(next != null){
       page++;
-
-      setTimeout(() => {
-        // loader
-        loaderContainer.style.display = 'block';
-        loader.style.display = 'block';
-        btn.style.display = 'block';
+      // loader
+      loaderContainer.style.display = 'block';
+      loader.style.display = 'block';
         
-        setTimeout(() => {
-          loaderContainer.style.display = 'none';
-          loader.style.display = 'none';
-          // get posts
-          getPosts();
-        }, 1000)
+      setTimeout(() => {
+        loaderContainer.style.display = 'none';
+        loader.style.display = 'none';
+        // get posts
+        getPosts();
+        btn.style.display = 'block';
       }, 2000)
 
 
