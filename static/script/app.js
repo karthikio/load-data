@@ -58,7 +58,9 @@ window.addEventListener('load', () => {
 
   // show more posts onclick
   btn.addEventListener('click', e => {
-    btn.style.display = 'none';
+    // mute btn
+    btn.disabled = true;
+    btn.classList.add('disabled-btn');
 
     e.preventDefault();
     if(next != null){
@@ -72,7 +74,9 @@ window.addEventListener('load', () => {
         loader.style.display = 'none';
         // get posts
         getPosts();
-        btn.style.display = 'block';
+        // enable btn
+        btn.disabled = false;
+        btn.classList.remove('disabled-btn');
       }, 2000)
 
 

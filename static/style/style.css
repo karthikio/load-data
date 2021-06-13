@@ -70,10 +70,28 @@ body{
   color: #0099ff;
 }
 
+.disabled-btn{
+  cursor: not-allowed;
+  font-size: .9rem;
+  font-weight: 500;
+  outline: none;
+  border: #4f4f4f 1px solid;
+  background-color: #1e1e1ea1;
+  height: 34px;
+  width: 300px;
+  margin: 10px auto;
+  border-radius: 3px;
+  color: #4f4f4f;
+}
+
+.disabled-btn:hover{
+  border: #4f4f4f solid 1px;
+  color: #4f4f4f;
+}
+
 #loader-container{
   height: 2px;
   width: 100%;
-  background-color: #4f4f4f;
   top: 0;
   position: fixed;
   z-index: 11;
