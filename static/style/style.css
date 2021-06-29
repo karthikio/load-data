@@ -104,6 +104,44 @@ body{
   animation: loading 2s 1;
 }
 
+#input-form{
+  border: solid #4d4d4d 1px;
+  height: 40px;
+  width: 400px;
+  background-color: #00000000;
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+
+#input-form:focus{
+  border: 1px solid #0099ff;
+}
+
+.input-btn{
+  font-size: 1rem;
+  outline: none;
+  background-color: #0099ff;
+  color: #fff;
+  border: none;
+  height: 40px;
+  width: 80px;
+  border-radius: 4px;
+}
+
+
+.input-btn:active{
+  background-color: #0d1117;
+  border: #4d4d4d solid 1px;
+}
+
+.filter-container{
+  margin: 20px auto;
+}
+
 
 @keyframes loading{
   from{
