@@ -4,6 +4,8 @@ let postsContainer = document.querySelector('.posts-container');
 let btn = document.getElementById('load-data-btn');
 let loaderContainer = document.getElementById('loader-container');
 let loader = document.getElementById('loader');
+let inputForm = document.getElementById('input-form');
+let inputBtn = document.getElementById('input-btn')
 
 console.log(loader)
 console.log(loaderContainer)
@@ -85,4 +87,21 @@ window.addEventListener('load', () => {
     }
   })
 
+  inputForm.addEventListener('input', filterPosts);
+
+
+  function filterPosts(e){
+    const value = e.target.value.toUpperCase();
+    const allPosts = document.querySelectorAll('.post');
+
+    allPosts.forEach(post => {
+      const title = post.querySelector('.title').innerText.toUpperCase();
+      const info = post.querySelector('.info').innerText.toUpperCase();
+      if (title.indexOf(value) > -1 || info.indexOf(value) > -1){
+        post.style.display = 'block';
+      }else{
+        post.style.display = 'none';
+      }
+    })
+  }
 })
